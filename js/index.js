@@ -55,14 +55,19 @@ links[3].textContent = siteContent.nav["nav-item-4"];
 links[4].textContent = siteContent.nav["nav-item-5"];
 links[5].textContent = siteContent.nav["nav-item-6"];
 
+// adding loop to style the nav text to green
 links.forEach((item)=>{
   item.style.color = "green";
 })
 
-// // adding h1 
+// adding h1 
 const myH1 = document.querySelector("h1");
 console.log(myH1);
 myH1.textContent = siteContent.cta["h1"];
+
+// adding br to the h1 text
+const ctaH1 = document.querySelector('.cta-text > h1');
+ctaH1.innerHTML = siteContent['cta']['h1'].replace(/ /g, '<br>');
 
 // // adding button 
 const mybt = document.querySelector("button");
@@ -105,6 +110,35 @@ newPara[2].textContent = siteContent["contact"]["email"];
 // adding footer
 const myFooter = document.querySelector("footer p");
 myFooter.textContent = siteContent.footer["copyright"];
+
+// const newContenido = document.createElement("body");
+// newContenido.append(newContenido);
+
+// selecting the footer
+const aleContent = document.createElement("a");
+
+// adding content to that footer
+aleContent.textContent ="Team (^_^)";
+
+// selecting the body
+const parentElement = document.querySelector('nav');
+
+// append method
+parentElement.append(aleContent);
+
+
+// selecting the footer
+const smallElement = document.createElement("a");
+
+// adding content to that footer
+smallElement.textContent ="Selection (^_^)";
+
+// // selecting the body
+const bigElement = document.querySelector('nav');
+
+// append method
+bigElement.prepend(smallElement);
+
 
 
 
