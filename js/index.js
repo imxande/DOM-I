@@ -40,3 +40,110 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// adding image
+const myImage = document.querySelector("#cta-img");
+myImage.setAttribute("src", siteContent["cta"]["img-src"])
+
+// adding nav
+const links = document.querySelectorAll("nav a");
+console.log(links);
+links[0].textContent = siteContent.nav["nav-item-1"];
+links[1].textContent = siteContent.nav["nav-item-2"];
+links[2].textContent = siteContent.nav["nav-item-3"];
+links[3].textContent = siteContent.nav["nav-item-4"];
+links[4].textContent = siteContent.nav["nav-item-5"];
+links[5].textContent = siteContent.nav["nav-item-6"];
+
+// adding loop to style the nav text to green
+links.forEach((item)=>{
+  item.style.color = "green";
+})
+
+// adding h1 
+const myH1 = document.querySelector("h1");
+console.log(myH1);
+myH1.textContent = siteContent.cta["h1"];
+
+// adding br to the h1 text
+const ctaH1 = document.querySelector('.cta-text > h1');
+ctaH1.innerHTML = siteContent['cta']['h1'].replace(/ /g, '<br>');
+
+// // adding button 
+const mybt = document.querySelector("button");
+console.log(mybt);
+mybt.textContent = siteContent.cta["button"];
+
+// adding h4
+const myH4 = document.querySelectorAll(".main-content h4");
+console.log(myH4);
+myH4[0].textContent = siteContent["main-content"]["features-h4"];
+myH4[1].textContent = siteContent["main-content"]["about-h4"];
+myH4[2].textContent = siteContent["main-content"]["services-h4"];
+myH4[3].textContent = siteContent["main-content"]["product-h4"];
+myH4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+// adding middle image
+const middle_image = document.querySelector("#middle-img")
+middle_image.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+// adding parragraph
+const myPara = document.querySelectorAll(".main-content p");
+console.log(myH4);
+myPara[0].textContent = siteContent["main-content"]["features-content"];
+myPara[1].textContent = siteContent["main-content"]["about-content"];
+myPara[2].textContent = siteContent["main-content"]["services-content"];
+myPara[3].textContent = siteContent["main-content"]["product-content"];
+myPara[4].textContent = siteContent["main-content"]["vision-content"];
+
+// adding contact 
+const newH4 = document.querySelector(".contact h4");
+console.log(newH4)
+newH4.textContent = siteContent["contact"]["contact-h4"];
+
+// adding contact info
+const newPara = document.querySelectorAll(".contact p")
+newPara[0].textContent = siteContent["contact"]["address"];
+newPara[1].textContent = siteContent["contact"]["phone"];
+newPara[2].textContent = siteContent["contact"]["email"];
+
+// adding footer
+const myFooter = document.querySelector("footer p");
+myFooter.textContent = siteContent.footer["copyright"];
+
+// const newContenido = document.createElement("body");
+// newContenido.append(newContenido);
+
+// selecting the footer
+const aleContent = document.createElement("a");
+
+// adding content to that footer
+aleContent.textContent ="Team (^_^)";
+
+// selecting the body
+const parentElement = document.querySelector('nav');
+
+// append method
+parentElement.append(aleContent);
+
+
+// selecting the footer
+const smallElement = document.createElement("a");
+
+// adding content to that footer
+smallElement.textContent ="Selection (^_^)";
+
+// // selecting the body
+const bigElement = document.querySelector('nav');
+
+// append method
+bigElement.prepend(smallElement);
+
+
+
+
+
+
+
+
+
